@@ -1,7 +1,9 @@
+# Core
 flask>=3.0.0
-
-# Optional — install only what you need:
-# pymodbus>=3.0.0        # Modbus TCP (alternative to built-in)
-# python-snap7>=1.3      # Siemens S7  (also needs libsnap7.so / snap7.dll)
-# opcua>=0.98.13         # OPC-UA client
-# paho-mqtt>=1.6.1       # MQTT broker client
+flask-socketio>=5.3.6
+gevent>=23.9.1
+gevent-websocket>=0.10.1
+gunicorn>=21.2.0
+ 
+# PLC Drivers (install only what you need)
+pymodbus>=3.5.0

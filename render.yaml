@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: scada-pro
+    env: python
+    region: singapore        # change to: oregon / frankfurt / ohio as needed
+    plan: starter            # starter=$7/mo (free tier sleeps after 15min)
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --config gunicorn_config.py app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: SCADA_SECRET
+        generateValue: true  # Render auto-generates a secure random value
+      - key: SCADA_PORT
+        value: 10000         # Render always uses PORT env var — overridden below
+      - key: PORT
+        value: 10000

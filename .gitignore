@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+env/
+.venv/
+
+# SCADA config (contains PLC IPs — commit your own version carefully)
+scada_config.json
+
+# Render / OS
+.render/
+.DS_Store
+Thumbs.db
+*.log
